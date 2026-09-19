@@ -1,4 +1,4 @@
-// app component 
+// app component placeholder
 function App(){
   return(
     <div>
