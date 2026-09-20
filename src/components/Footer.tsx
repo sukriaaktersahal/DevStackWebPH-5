@@ -2,8 +2,8 @@
 // importing social icon from react icons
 import { FiGithub, FiTwitter, FiLinkedin } from "react-icons/fi";
 
-const Footer = () => {
-  return (
+const Footer =() =>{
+  return(
     <footer className="border-t border-gray-200 mt-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* grid */}
@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 mb-3">
               <div className="brand-gradient text-white font-bold w-9 h-9 rounded-lg flex items-center justify-center">
                 DS</div>
-              <span className="font-bold text-lg"> Dev<span className="text-brand-gradient">Stack</span></span>
+                 <span className="font-bold text-lg"> Dev<span className="text-brand-gradient">Stack</span></span>
             </div>
 
             <p className="text-sm text-gray-600 mb-4">
@@ -21,9 +21,9 @@ const Footer = () => {
             </p>
 
                 <div className="flex gap-3 text-gray-600 text-xl">
-                <a href="#" aria-label="GitHub"><FiGithub /></a>
-                <a href="#" aria-label="Twitter"><FiTwitter /></a>
-                <a href="#" aria-label="LinkedIn"><FiLinkedin /></a>
+                    <a href="#" aria-label="GitHub"><FiGithub /></a>
+                    <a href="#" aria-label="Twitter"><FiTwitter /></a>
+                    <a href="#" aria-label="LinkedIn"><FiLinkedin /></a>
                 </div>
           </div>
 
