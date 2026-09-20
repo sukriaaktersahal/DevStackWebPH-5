@@ -13,19 +13,16 @@ interface MainLayoutProps{
   handleRemoveAll:() => void;
 }
 
-const MainLayout = ({technologies, stack, handleAddToStack, handleRemoveFromStack, handleRemoveAll,}: MainLayoutProps) =>{
+const MainLayout =({technologies, stack, handleAddToStack, handleRemoveFromStack, handleRemoveAll,}: MainLayoutProps) =>{
   return(
     <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
       {/* heading */}
-      <h2 className="text-3xl md:text-4xl font-extrabold mb-2">
-        Explore the <span className="text-brand-gradient">Technologies</span>
-      </h2>
-
+      <h2 className="text-3xl md:text-4xl font-extrabold mb-2">Explore the <span className="text-brand-gradient">Technologies</span></h2>
       <p className="text-gray-600 mb-8">Pick one technology per category to build your ideal stack.</p>
+
       {/* techlist with sidebar */}
       <div className="flex flex-col lg:flex-row gap-8">
-        <div className="flex-grow"><TechList technologies={technologies} stack={stack} handleAddToStack={handleAddToStack}/>
-        </div>
+        <div className="flex-grow"><TechList technologies={technologies} stack={stack} handleAddToStack={handleAddToStack}/></div>
         <div className="lg:w-80">
           <Sidebar stack={stack} handleRemoveFromStack={handleRemoveFromStack} handleRemoveAll={handleRemoveAll}/>
         </div>
