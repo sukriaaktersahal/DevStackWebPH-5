@@ -3,10 +3,10 @@
 import type { Technology } from "../types";
 
 // techcardprops interface
-interface TechCardProps {
+interface TechCardProps{
   tech: Technology;
   stack: Technology[];
-  handleAddToStack:(tech: Technology) => void;
+  handleAddToStack:(tech: Technology)=> void;
 }
 
 // destructuring techCard
@@ -15,7 +15,7 @@ const TechCard =({tech, stack, handleAddToStack }: TechCardProps) =>{
     const isAdded = stack.some((item) => item.id === tech.id);
 
     // card container
-    return (
+    return(
     <div className="border border-gray-200 rounded-2xl p-5 bg-white hover:shadow-lg transition-shadow flex flex-col h-full">
         {/* here, icon will be on left, batch on right */}
         <div className="flex items-center justify-between mb-4">
@@ -37,13 +37,9 @@ const TechCard =({tech, stack, handleAddToStack }: TechCardProps) =>{
         {/* button */}
         <button onClick={() => handleAddToStack(tech)} disabled={isAdded}
             className={`w-full py-2.5 rounded-lg font-semibold transition ${
-                isAdded
-                    ? "bg-green-100 text-green-700 cursor-not-allowed"
-                    : "bg-gray-900 text-white hover:bg-gray-800"
-                     }`}
-                >
+                isAdded? "bg-green-100 text-green-700 cursor-not-allowed": "bg-gray-900 text-white hover:bg-gray-800"}`}>
         {/* if isAdded true then "Added to Stack" */}
-        {isAdded ? "Added to Stack" : "Add to Stack"}
+        {isAdded? "Added to Stack" : "Add to Stack"}
         </button>
     </div>
   );
