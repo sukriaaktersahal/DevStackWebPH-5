@@ -12,7 +12,6 @@ A modern React + TypeScript web app where developers can explore popular develop
 
 ![DevStackWebPH-5 Preview](./public/preview.png)
 
-> Screenshot added.
 
 
 ## Technologies Used
