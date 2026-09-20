@@ -5,11 +5,11 @@ import type { Technology } from "../types";
 // Props Interface
 interface SidebarProps{
   stack: Technology[];
-  handleRemoveFromStack:(id: string) => void;
-  handleRemoveAll: () => void;
+  handleRemoveFromStack:(id: string)=> void;
+  handleRemoveAll: ()=> void;
 }
 
-const Sidebar = ({stack, handleRemoveFromStack, handleRemoveAll,}: SidebarProps)=> {
+const Sidebar =({stack, handleRemoveFromStack, handleRemoveAll,}: SidebarProps)=>{
   return(
     <div className="border border-gray-200 rounded-2xl p-5 bg-white h-fit lg:sticky lg:top-24">
         {/* Heading */}
@@ -20,6 +20,7 @@ const Sidebar = ({stack, handleRemoveFromStack, handleRemoveAll,}: SidebarProps)
         </p>
 
         {stack.length === 0?(
+            // empty state
         <div className="border-2 border-dashed border-gray-200 rounded-xl py-10 text-center text-gray-400 text-sm">
           Your stack is empty.</div>
         ):(
@@ -38,17 +39,13 @@ const Sidebar = ({stack, handleRemoveFromStack, handleRemoveAll,}: SidebarProps)
                     </div>
 
                     {/* removing button */}
-                    <button onClick={() => handleRemoveFromStack(item.id)}
-                     className="text-gray-400 hover:text-red-500 text-lg transition" aria-label={`Remove ${item.name}`}>
-                    ✕
-                    </button>
-                </div>
+                    <button onClick={() => handleRemoveFromStack(item.id)} className="text-gray-400 hover:text-red-500 text-lg"></button>
+              </div>
                 ))}
             </div>
 
             {/* removing all button */}
-            <button onClick={handleRemoveAll}
-                className="w-full mt-4 py-2.5 border border-red-300 text-red-500 rounded-lg font-semibold hover:bg-red-50 transition">
+            <button onClick={handleRemoveAll} className="w-full mt-4 py-2.5 border border-red-300 text-red-500 rounded-lg font-semibold hover:bg-red-50 transition">
                 Remove All</button>
             </>
         )}
