@@ -5,14 +5,14 @@ A modern React + TypeScript web app where developers can explore popular develop
 
 ## Live Site
 
-[**Live Demo**](https://your-vercel-link.vercel.app) — *Coming soon ......*
+[**Live Demo**](https://dev-stack-web-ph-5.vercel.app)
 
 
 ## Preview
 
-![DevStackWebPH-5 Preview](./preview.png)
+![DevStackWebPH-5 Preview](./public/preview.png)
 
-> Screenshot will be added after final work.
+> Screenshot added.
 
 
 ## Technologies Used
